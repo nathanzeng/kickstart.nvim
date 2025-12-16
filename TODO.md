@@ -1,8 +1,7 @@
-I need a shortcut to open :DiffviewOpen
-
 modularize lazy-plugins
 
 I remember seeing a quote/paren/bracket autocomplete that I wanted.
+It's called mini.pairs
 
 Get started working on something
 

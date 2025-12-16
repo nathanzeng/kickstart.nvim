@@ -1,6 +1,8 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -38,8 +40,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Page down and up for buffer next and previous
 vim.keymap.set('n', '<PageDown>', '<cmd>bnext<CR>')
 vim.keymap.set('n', '<PageUp>', '<cmd>bprev<CR>')
--- Leader w for closing buffer
-vim.keymap.set('n', '<leader>w', '<cmd>bd<CR><cmd>bprev<CR>', { desc = 'Close buffer' })
+-- TODO:gonna need mini buf remove once I start using splits
+vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR><cmd>bprev<CR>', { desc = 'Close buffer' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

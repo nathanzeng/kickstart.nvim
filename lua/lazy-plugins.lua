@@ -48,39 +48,6 @@ require('lazy').setup({
     },
   },
 
-  -- Git diff view
-  {
-    'sindrets/diffview.nvim',
-    config = function()
-      require('diffview').setup {
-        vim.keymap.set('n', '<leader>git', '<cmd>DiffviewOpen<CR>', { desc = '[git] Diff' }),
-      }
-    end,
-  },
-
-  -- File tree
-  -- {
-  --   'nvim-tree/nvim-tree.lua',
-  --   version = '*',
-  --   lazy = false,
-  --   dependencies = {
-  --     'nvim-tree/nvim-web-devicons',
-  --   },
-  --   config = function()
-  --     require('nvim-tree').setup {}
-  --   end,
-  -- },
-
-  -- Bufferline
-  {
-    'akinsho/bufferline.nvim',
-    version = '*',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      require('bufferline').setup {}
-    end,
-  },
-
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -110,6 +77,7 @@ require('lazy').setup({
         keys = {},
       },
 
+      -- TODO: h isn't enabled by default, submit issue/PR?
       -- Document existing key chains
       spec = {
         { '<leader>s', group = '[S]earch' },
@@ -646,37 +614,6 @@ require('lazy').setup({
     },
   },
 
-  {
-    'EdenEast/nightfox.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    config = function()
-      require 'nightfox'
-      vim.cmd.colorscheme 'nightfox'
-    end,
-  },
-
-  -- I don't actually like the colorblind settings for nightfox, but this is what I tested
-  -- {
-  --   'EdenEast/nightfox.nvim',
-  --   priority = 1000, -- Make sure to load this before all the other start plugins.
-  --   config = function()
-  --     require('nightfox').setup {
-  --       options = {
-  --         colorblind = {
-  --           enable = true,
-  --           severity = {
-  --             protan = 0.3,
-  --             deutan = 1,
-  --             tritan = 0,
-  --           },
-  --         },
-  --       },
-  --     }
-  --
-  --     vim.cmd.colorscheme 'nightfox'
-  --   end,
-  -- },
-
   -- Highlight todo, notes, etc in comments
   {
     'folke/todo-comments.nvim',
@@ -685,43 +622,6 @@ require('lazy').setup({
     opts = { signs = false, keywords = { TODO = { color = 'warning' } } },
   },
 
-  { -- Collection of various small independent plugins/modules
-    'echasnovski/mini.nvim',
-    config = function()
-      -- Better Around/Inside textobjects
-      --
-      -- Examples:
-      --  - va)  - [V]isually select [A]round [)]paren
-      --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
-      --  - ci'  - [C]hange [I]nside [']quote
-      require('mini.ai').setup { n_lines = 500 }
-
-      -- Add/delete/replace surroundings (brackets, quotes, etc.)
-      --
-      -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-      -- - sd'   - [S]urround [D]elete [']quotes
-      -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
-
-      -- Simple and easy statusline.
-      --  You could remove this setup call if you don't like it,
-      --  and try some other statusline plugin
-      local statusline = require 'mini.statusline'
-      -- set use_icons to true if you have a Nerd Font
-      statusline.setup { use_icons = vim.g.have_nerd_font }
-
-      -- You can configure sections in the statusline by overriding their
-      -- default behavior. For example, here we set the section for
-      -- cursor location to LINE:COLUMN
-      ---@diagnostic disable-next-line: duplicate-set-field
-      statusline.section_location = function()
-        return '%2l:%-2v'
-      end
-
-      -- ... and there is more!
-      --  Check out: https://github.com/echasnovski/mini.nvim
-    end,
-  },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -764,11 +664,6 @@ require('lazy').setup({
   -- require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
-  -- TODO: I need to do this
-  -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    This is the easiest way to modularize your config.
-  --
-  --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
