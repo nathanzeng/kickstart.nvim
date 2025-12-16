@@ -1,6 +1,12 @@
-Figure out how to use gitsigns, we have the keymaps but no idea how to use them
+I need a shortcut to open :DiffviewOpen
 
-Figure out how to use Telescope better
+Pretty sure that I want bufferline
+
+modularize lazy-plugins
+
+I remember seeing a quote/paren/bracket autocomplete that I wanted.
+
+Telescope grep does not work, need to install something to make that work.
 
 Kind of want a file tree, but not sure
 
