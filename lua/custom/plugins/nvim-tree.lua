@@ -6,8 +6,20 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
-    require('nvim-tree').setup {
-      vim.keymap.set('n', '<leader>tt', '<cmd>NvimTreeToggle<CR>', { desc = '[T]ree' }),
-    }
+    require('nvim-tree').setup {}
+    -- Don't do random things in the setup table, do it in the config function instead
+    local api = require 'nvim-tree.api'
+
+    -- Toggle the tree
+    vim.keymap.set('n', '<leader>tt', api.tree.toggle, { desc = 'Toggle [T]ree' })
+
+    -- Increase and decrease tree width
+    vim.keymap.set('n', '<leader>t<right>', function()
+      api.tree.resize { relative = 25 }
+    end, { desc = 'Increase tree width' })
+
+    vim.keymap.set('n', '<leader>t<left>', function()
+      api.tree.resize { relative = -25 }
+    end, { desc = 'Decrease tree width' })
   end,
 }
