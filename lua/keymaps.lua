@@ -11,8 +11,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- TODO: this isn't working in iTerm, need to use <C-\><C-n>
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- NOTE: This was originally double escape in kickstart, look for conflicts
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Left and right arrow in normal mode scroll the page
 vim.keymap.set('n', '<left>', '<C-y>')

@@ -1,4 +1,10 @@
--- Highlight todo, notes, etc in comments
+-- Highlight keywords
+-- TODO
+-- HACK
+-- WARN
+-- PERF
+-- NOTE
+-- TEST
 return {
   'folke/todo-comments.nvim',
   event = 'VimEnter',
