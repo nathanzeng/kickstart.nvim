@@ -20,12 +20,12 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- This does have some conflicts like if you want to use vim in the neovim terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- Left and right arrow in normal mode scroll the page
-vim.keymap.set('n', '<left>', '<C-y>')
-vim.keymap.set('n', '<right>', '<C-e>')
--- Up and down arrow jump by half page
-vim.keymap.set('n', '<down>', '<C-d>')
-vim.keymap.set('n', '<up>', '<C-u>')
+-- Up and down arrow in normal mode scroll the page
+vim.keymap.set('n', '<up>', '<C-y>')
+vim.keymap.set('n', '<down>', '<C-e>')
+-- Left and right arrow jump by half page
+vim.keymap.set('n', '<left>', '<C-u>')
+vim.keymap.set('n', '<right>', '<C-d>')
 
 --  Use CTRL+<hjkl> to switch between windows
 --  See `:help wincmd` for a list of all window commands
