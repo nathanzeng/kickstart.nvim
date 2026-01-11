@@ -1,3 +1,5 @@
+-- TODO: let's remove all the vim.o with a local variable that's readable
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
@@ -57,6 +59,14 @@ vim.o.splitbelow = true
 --   and `:help lua-options-guide`
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- TODO: consider shift width as well
+
+-- Visual only controlling how wide tabs look
+vim.opt.tabstop = 4
+
+-- Don't have `o` add a comment
+vim.opt.formatoptions:remove 'o'
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
