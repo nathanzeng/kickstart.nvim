@@ -8,7 +8,7 @@ return {
 }
 
 -- I don't actually like the colorblind settings for nightfox, but this is what I tested
--- {
+-- return {
 --   'EdenEast/nightfox.nvim',
 --   priority = 1000, -- Make sure to load this before all the other start plugins.
 --   config = function()
@@ -27,4 +27,4 @@ return {
 --
 --     vim.cmd.colorscheme 'nightfox'
 --   end,
--- },
+-- }

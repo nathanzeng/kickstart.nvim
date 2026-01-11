@@ -37,10 +37,6 @@ If you experience any errors while trying to install kickstart, run `:checkhealt
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Disable netrw for nvim-tree
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- Allegedly gives 24 bit color
 vim.opt.termguicolors = true
 
