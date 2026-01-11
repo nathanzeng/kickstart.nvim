@@ -1,9 +1,6 @@
--- TODO: let's remove all the vim.o with a local variable that's readable
-
 -- [[ Setting options ]]
 -- See `:help vim.o`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
+-- For more options, you can see `:help option-list`
 
 -- Add line numbers and make them relative
 vim.o.number = true
