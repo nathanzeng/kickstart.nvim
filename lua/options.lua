@@ -13,6 +13,8 @@ vim.o.mouse = 'a'
 vim.o.showmode = false
 
 -- Keep the cursor fat in all modes, use highlighting for insert modes
+-- TODO: what is the select mode shown in the status line after autocompleting a function
+-- feel like that should get the orange highlight
 vim.api.nvim_set_hl(0, 'InsertCursor', { bg = '#C68642' })
 vim.opt.guicursor = 'i-r:block-InsertCursor'
 
