@@ -60,7 +60,7 @@ return {
         --   gitsigns.diffthis '@'
         -- end, { desc = 'git [D]iff against last commit' })
 
-        -- map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle git show [b]lame line' })
+        map('n', '<leader>gl', gitsigns.toggle_current_line_blame, { desc = 'Toggle git blame [l]ine' })
         -- TODO: I want it to toggle off blame too, have to figure out how to delete the buffer
         map('n', '<leader>gb', gitsigns.blame, { desc = '[b]lame' })
 
