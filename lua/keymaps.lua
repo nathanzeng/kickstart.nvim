@@ -16,9 +16,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- NOTE: This was originally double escape in kickstart, but that doesn't work
--- This does have some conflicts like if you want to use vim in the neovim terminal
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Up and down arrow in normal mode scroll the page
 vim.keymap.set('n', '<up>', '<C-y>')
