@@ -32,13 +32,10 @@ return {
       return '%2l:%-2v'
     end
 
-    -- TODO: i don't think i actually want buffer tabs
-    -- Buffer tabs
-    require('mini.tabline').setup()
-
     -- Command line hints
     require('mini.cmdline').setup()
 
+    -- TODO: not sure if i need this
     -- Better buffer delete
     require('mini.bufremove').setup()
 
