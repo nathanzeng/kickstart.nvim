@@ -74,7 +74,7 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.tabstop = 4
 
 -- Don't have `o` add a comment
--- TODO: this isnt actually working, have to source the file to make it work
+-- TODO: this isnt actually working, need to do something with autocommands
 vim.opt.formatoptions:remove 'o'
 
 -- Preview substitutions live, as you type!
