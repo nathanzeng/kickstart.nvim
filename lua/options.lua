@@ -11,7 +11,14 @@ vim.o.mouse = 'a'
 
 -- Disable status line since I'm using lualine to put that at the top in winbar
 vim.o.laststatus = 0
+
+-- COMMAND LINE OPTIONS
+-- Don't show the mode
 vim.o.showmode = false
+-- Don't show this ruler thing that is line number and file progress
+vim.o.ruler = false
+-- Show partial command flickers j and k when scrolling
+vim.o.showcmd = false
 
 -- Keep the cursor fat in all modes, use highlighting for insert modes
 -- TODO: what is the select mode shown in the status line after autocompleting a function
