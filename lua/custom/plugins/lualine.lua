@@ -10,29 +10,20 @@ local colors = {
   darkgray     = '#3c3836',
   lightgray    = '#504945',
   inactivegray = '#7c6f64',
+  bForeground = '#c9ba9b',
+}
+
+local normalTheme = {
+  a = { bg = colors.gray, fg = colors.black, gui = 'bold' },
+  b = { bg = colors.lightgray, fg = colors.bForeground },
+  c = { bg = colors.darkgray, fg = colors.gray },
 }
 
 local custom_gruvbox = {
-  normal = {
-    a = { bg = colors.gray, fg = colors.black, gui = 'bold' },
-    b = { bg = colors.lightgray, fg = colors.white },
-    c = { bg = colors.darkgray, fg = colors.gray },
-  },
-  insert = {
-    a = { bg = colors.blue, fg = colors.black, gui = 'bold' },
-    b = { bg = colors.lightgray, fg = colors.white },
-    c = { bg = colors.lightgray, fg = colors.white },
-  },
-  visual = {
-    a = { bg = colors.yellow, fg = colors.black, gui = 'bold' },
-    b = { bg = colors.lightgray, fg = colors.white },
-    c = { bg = colors.inactivegray, fg = colors.black },
-  },
-  replace = {
-    a = { bg = colors.red, fg = colors.black, gui = 'bold' },
-    b = { bg = colors.lightgray, fg = colors.white },
-    c = { bg = colors.black, fg = colors.white },
-  },
+  normal = normalTheme,
+  insert = normalTheme,
+  visual = normalTheme,
+  replace = normalTheme,
   command = {
     a = { bg = colors.green, fg = colors.black, gui = 'bold' },
     b = { bg = colors.lightgray, fg = colors.white },
@@ -45,6 +36,10 @@ local custom_gruvbox = {
   },
 }
 
+local function custom_filename()
+  return '%F%m%r'
+end
+
 -- TODO: i like the idea of showing the full path to the file but highlighting the name of the file
 return {
   'nvim-lualine/lualine.nvim',
@@ -52,6 +47,7 @@ return {
     require('lualine').setup {
       options = { theme = custom_gruvbox },
       sections = {
+        lualine_c = { custom_filename },
         lualine_x = { 'filetype' },
       },
     }
