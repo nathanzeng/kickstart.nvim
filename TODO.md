@@ -2,14 +2,13 @@ Graphql LSP not working
 https://www.npmjs.com/package/graphql-language-service-server#user-content-graphql-configuration-file
 :LspLog gives some useful information
 
+A vim testing plugin might be nice. vim-test was more barebones and neotest more featureful
+
 modularize lazy-plugins
 
 I remember seeing a quote/paren/bracket autocomplete that I wanted.
 It's called mini.pairs
 
-Telescope search by directory
-Seems to be an example in :help oil-actions
-
-Can optimize oil a bit more, commands for opening oil from the home directory or closing oil seem useful
-
 Optimize git diff workflow, gf needs to close the diff i think
+
+Make lualine prettier

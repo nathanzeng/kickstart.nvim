@@ -54,7 +54,7 @@ return {
           { 'filetype', separator = '', icon_only = true, colored = false, padding = { left = 1, right = 0 } },
           { 'filename', path = 0, file_status = false, padding = { left = 0, right = 1 } },
         },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_b = { 'diagnostics', 'diff', 'branch' },
         lualine_c = {
           {
             'filename',
