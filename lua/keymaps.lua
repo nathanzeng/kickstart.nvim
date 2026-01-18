@@ -41,14 +41,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
--- TODO: I think I want a keybind for :xa, save all and close
-
--- TODO: Might want to enable this for the insert modes too
-
--- Page down and up for buffer next and previous
-vim.keymap.set('n', '<PageDown>', '<cmd>bnext<CR>')
-vim.keymap.set('n', '<PageUp>', '<cmd>bprev<CR>')
-vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR><cmd>bprev<CR>', { desc = 'Close buffer' })
+vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'Close buffer' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
