@@ -7,9 +7,34 @@ return {
       view_options = {
         show_hidden = true,
       },
+      -- These apply to oil buffers only
       keymaps = {
-        -- Will collide with my floaterminal otherwise
+        -- Collides with floaterminal
+        -- Was originally open file in a new tab
         ['<C-t>'] = false,
+        -- Live grep in current directory
+        ['<leader>fg'] = {
+          function()
+            require('telescope.builtin').live_grep {
+              cwd = require('oil').get_current_dir(),
+            }
+          end,
+          mode = 'n',
+          --nowait to see if there is a longer key combo elsewhere
+          nowait = true,
+          desc = 'Live grep in the current directory',
+        },
+        -- Find files in current directory
+        ['<leader>ff'] = {
+          function()
+            require('telescope.builtin').find_files {
+              cwd = require('oil').get_current_dir(),
+            }
+          end,
+          mode = 'n',
+          nowait = true,
+          desc = 'Find files in the current directory',
+        },
       },
     }
     vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })

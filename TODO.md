@@ -2,8 +2,6 @@ Graphql LSP not working
 https://www.npmjs.com/package/graphql-language-service-server#user-content-graphql-configuration-file
 :LspLog gives some useful information
 
-The linter still isn't 100% there, the custom no string thing isn't there yet
-
 modularize lazy-plugins
 
 I remember seeing a quote/paren/bracket autocomplete that I wanted.
