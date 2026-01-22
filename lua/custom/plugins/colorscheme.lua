@@ -25,7 +25,7 @@ return {
           -- start with `#` the string will be used as the path of the palette table. Defining just
           -- a color uses the base version of that color.
           --NOTE: playing around to try to make the vue files look good
-          keyword = 'yellow',
+          keyword = 'orange',
           number = 'magenta',
           const = 'magenta',
         },
