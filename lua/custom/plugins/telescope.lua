@@ -7,6 +7,7 @@
 
 -- Fuzzy Finder (files, lsp, etc)
 return {
+  -- TODO: they reccomend pinning to latest release tag here
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
   dependencies = {
