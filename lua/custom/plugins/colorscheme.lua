@@ -1,3 +1,5 @@
+--NOTE: tweaked to make vue files look good
+-- Diffview looks a little bit odd now however
 return {
   'EdenEast/nightfox.nvim',
   priority = 1000, -- Make sure to load this before all the other start plugins.
@@ -15,6 +17,8 @@ return {
         -- Use a more colorblind friendly blue and magenta/purple
         blue = '#0072B2',
         magenta = '#6F6AE1',
+        -- Use a pink that is closer to white so more discernable from cyan
+        pink = '#e1a1de',
       },
     }
 
@@ -26,7 +30,6 @@ return {
           -- Specs allow you to define a value using either a color or template. If the string does
           -- start with `#` the string will be used as the path of the palette table. Defining just
           -- a color uses the base version of that color.
-          --NOTE: playing around to try to make the vue files look good
           keyword = 'orange',
           number = 'magenta',
           const = 'magenta',
