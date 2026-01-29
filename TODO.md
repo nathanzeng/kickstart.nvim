@@ -9,10 +9,4 @@ There is also sonar, but be careful not to mess up your existing dev env
 Optimize git diff workflow, gf needs to close the diff i think
 <leader>d for diff?
 
-I don't like that custom components and div are the same color in vue template
-
 Similar to git diff, closing the git blame is a little bit annoying
-
-Telescope search through git changed files functionality?
-
-Modularize lazy-plugins
